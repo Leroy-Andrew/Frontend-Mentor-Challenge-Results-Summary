@@ -43,7 +43,7 @@ img, svg {
     var(--clr-secondary-400));
         
     --gradient-to-transparent: linear-gradient(var(--clr-primary-500), 
-    hsl(var(--clr-secondary-hsl-500))),
+    hsl(var(--clr-secondary-hsl-500)));
 
     --clr-accent-1: 0, 100%, 67%; 
     --clr-accent-2: 39, 100%, 56%;
@@ -185,15 +185,15 @@ body {
 }
 
 .summary-item svg {
-    stroke: hsl(var(--item-color));
+    stroke: red;
 }
 
-.summary-item-title {
+/* .summary-item-title {
     color: hsl(0, 100%, 67%);
     font-weight:  var(--fw-bold);
-}
+} */
 .summary-item[data-item-type="accent-1"] {
-    color: hsl(0, 100%, 67%);
+    --item-color: var(--clr-accent-1);
 }
 .summary-item[data-item-type="accent-2"] {
     --item-color: var(--clr-accent-2);
@@ -207,7 +207,7 @@ body {
 
 .summary-score {
     font-weight: var(--fw-black);
-    color: hsl(var(--clr-neutral-hsl-700), 0.4);
+    color: hsl(var(--clr-neutral-hsl-700), .3);
 }
 
 .summary-score span {
